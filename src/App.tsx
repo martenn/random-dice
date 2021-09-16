@@ -6,7 +6,7 @@ function App() {
   let [counter, setCounter] = useState(0);
   let [level, setLevel] = useState(1);
   let actions = ["liżesz", "gryziesz", "masujesz", "ssiesz", "ssiesz mocno", "klepiesz", "penetrujesz"];
-  let parts = ["ręce", "stopy", "ramiona", "palce", "pośladki", "włosy", "nos", "policzki", "język", "dziurka/penis/jajka", "dupka"];
+  let parts = ["ręce", "stopy", "ramiona", "palce", "pośladki", "włosy", "nos", "policzki", "język", "dziurka/penis", "dupka", "piersi", "sutki", "brodawki", "łechtaczka/jajka", "paszki"];
   let [action, setAction] = useState('');
   let [part, setPart] = useState('');
 
