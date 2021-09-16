@@ -26,10 +26,13 @@ button {
 }
 
 .placeholder {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   border: #1a00dd 3px solid;
   padding: 5px;
+  height: 50vh;
 }
 
 .info-box {

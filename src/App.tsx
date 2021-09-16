@@ -1,40 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Button } from './Button';
 
 function App() {
-  let counter = 0;
-  let level = 1;
-  let actions = ["liżesz", "gryziesz", "masujesz", "ssiesz", "ssiesz mocno", "klepiesz", "wkładasz"];
+  let [counter, setCounter] = useState(0);
+  let [level, setLevel] = useState(1);
+  let actions = ["liżesz", "gryziesz", "masujesz", "ssiesz", "ssiesz mocno", "klepiesz", "penetrujesz"];
   let parts = ["ręce", "stopy", "ramiona", "palce", "pośladki", "włosy", "nos", "policzki", "język", "dziurka/penis/jajka", "dupka"];
-  let action = '';
-  let part = '';
+  let [action, setAction] = useState('');
+  let [part, setPart] = useState('');
 
   const reset = () => {
-    counter = 0;
-    level = 1;
+    setCounter(0);
+    setLevel(1);
   }
 
   const randomAction = () => {
     const actionLength = actions.length;
     const random = Math.random();
     const index = Math.floor(random * actionLength);
-    action = actions[index];
+    setAction(actions[index]);
   }
 
   const randomPart = () => {
     const partLength = parts.length;
     const random = Math.random();
     const index = Math.floor(random * partLength);
-    part = parts[index];
+    setPart(parts[index]);
   }
 
   const toss = () => {
     console.log("toss");
     randomAction();
     randomPart();
-    console.log(level);
-    level++;
+    console.log(counter);
+    setCounter(counter + 1);
+    if (counter > 0 && counter % 10 === 0) {
+      setLevel(level + 1);
+    }
   }
 
   return (
