@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button } from './Button';
+import { Button } from './components/Button';
+import { toss } from './services/tasks'
 
 function App() {
   let [counter, setCounter] = useState(0);
@@ -15,25 +16,12 @@ function App() {
     setLevel(1);
   }
 
-  const randomAction = () => {
-    const actionLength = actions.length;
-    const random = Math.random();
-    const index = Math.floor(random * actionLength);
-    setAction(actions[index]);
-  }
+  const tossATask = () => {
+    console.log("tossATask");
+    const task = toss(level);
+    setAction(task.action);
+    setPart(task.part ?? '');
 
-  const randomPart = () => {
-    const partLength = parts.length;
-    const random = Math.random();
-    const index = Math.floor(random * partLength);
-    setPart(parts[index]);
-  }
-
-  const toss = () => {
-    console.log("toss");
-    randomAction();
-    randomPart();
-    console.log(counter);
     setCounter(counter + 1);
     if (counter > 0 && counter % 10 === 0) {
       setLevel(level + 1);
@@ -52,7 +40,7 @@ function App() {
           <Button
             className="she"
             text="Losuj"
-            clickHandler={() => toss()}>
+            clickHandler={() => tossATask()}>
           </Button>
         </div>
         <div className="App-header-row info-box">
