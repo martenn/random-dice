@@ -24,6 +24,10 @@ function App() {
     }
   }
 
+  const skipTask = () => {
+    setTask(toss(level));
+  }
+
   return (
     <div>
       <TaskBoard task={task}></TaskBoard>
@@ -32,17 +36,17 @@ function App() {
           text="Losuj"
           clickHandler={() => tossATask()}>
         </Button>
+        <Button
+          text="Pomiń"
+          clickHandler={() => skipTask()}>
+        </Button>
       </div>
       <div className="row">
-        <div className="info-box">
-          Poziom: {level}
+        <div className={`info-box level${level}`}>
+          <span className="info">Zabaw: {counter}</span>
         </div>
       </div>
-      <div className="row">
-        <div className="info-box">
-          Zabaw: {counter}
-        </div>
-      </div>
+
       <div className="row">
         <Button
           text="Reset"

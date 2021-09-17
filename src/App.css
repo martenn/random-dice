@@ -5,7 +5,7 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(16px + 2vmin);
 }
 
 .row {
@@ -19,11 +19,26 @@ body {
   width: 100%;
 }
 
+.info {
+  text-align: left;
+  padding: 20px;
+  flex: 1;
+}
+
+.info-box {
+  display: flex;
+  border-radius: 20px;
+  border: #4444cc 3px solid;
+  width: 100%;
+}
+
 button {
   display: block;
   width: 100%;
   padding: 20px;
-  background-color: cadetblue;
+  font-size: calc(16px + 2vmin);
+  background-color: #a5a5d4;
+  border-radius: 20px;
 }
 
 .task {
@@ -31,12 +46,20 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: #1a00dd 3px solid;
+  border: #4444cc 3px solid;
+  border-radius: 20px;
   padding: 5px;
   height: 50vh;
 }
 
-.info-box {
-  border: #991100 3px solid;
-  width: 100%;
+.level1 {
+  background-color: green;
+}
+
+.level2 {
+  background-color: orange;
+}
+
+.level3 {
+  background-color: red;
 }
