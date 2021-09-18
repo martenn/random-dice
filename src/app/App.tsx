@@ -4,9 +4,18 @@ import { Button } from './components/Button';
 import { TaskBoard } from './components/TaskBoard';
 import { Task } from './model/task';
 import { toss } from './services/tasks'
+import { ToastContainer, toast } from 'react-toastify';
+import { injectStyle } from "react-toastify/dist/inject-style";
+
+const skipLimit = 3;
+
+if (typeof window !== "undefined") {
+  injectStyle();
+}
 
 function App() {
   let [counter, setCounter] = useState(0);
+  let [skipCount, setSkipCount] = useState(0);
   let [level, setLevel] = useState(1);
   let [task, setTask] = useState(undefined as unknown as Task);
 
@@ -14,6 +23,7 @@ function App() {
     setTask(undefined as unknown as Task);
     setCounter(0);
     setLevel(1);
+    setSkipCount(0);
   }
 
   const tossATask = () => {
@@ -21,11 +31,19 @@ function App() {
     setCounter(counter + 1);
     if (counter > 0 && counter % 30 === 0) {
       setLevel(level + 1);
+      setSkipCount(0);
     }
   }
 
   const skipTask = () => {
     setTask(toss(level));
+    console.log(skipCount);
+    setSkipCount(skipCount + 1);
+    console.log(skipCount);
+    console.log('toast!')
+    if (skipCount === skipLimit - 1) {
+      toast("Koniec pomijania!");
+    }
   }
 
   return (
@@ -33,11 +51,14 @@ function App() {
       <TaskBoard task={task}></TaskBoard>
       <div className="row">
         <Button
+          className="action-button"
           text="Losuj"
           clickHandler={() => tossATask()}>
         </Button>
         <Button
           text="Pomiń"
+          className="action-button"
+          disabled={skipCount >= skipLimit}
           clickHandler={() => skipTask()}>
         </Button>
       </div>
@@ -49,10 +70,12 @@ function App() {
 
       <div className="row">
         <Button
+          className="action-button"
           text="Reset"
           clickHandler={() => reset()}>
         </Button>
       </div>
+      <ToastContainer hideProgressBar={false} />
     </div>
   );
 }

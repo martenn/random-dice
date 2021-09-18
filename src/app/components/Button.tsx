@@ -8,9 +8,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
   clickHandler,
   text,
-  className
+  className,
+  disabled
 }) => {
   return (
-    <button className={className} onClick={() => clickHandler()}>{text}</button>
+    <button disabled={disabled} className={className} onClick={() => clickHandler()}>{text}</button>
   )
 }
