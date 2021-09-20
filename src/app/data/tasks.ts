@@ -1,4 +1,4 @@
-import { Task } from '../model/task'
+import { Task } from 'app/model/task'
 
 /*
 levels:

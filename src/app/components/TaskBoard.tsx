@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Task } from '../model/task';
+import { Task } from 'app/model/task';
 
 interface TaskBoardProps {
   task?: Task;

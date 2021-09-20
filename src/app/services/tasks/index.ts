@@ -1,5 +1,5 @@
-import { Task } from '../../model/task'
-import { tasks } from '../../data/tasks'
+import { Task } from 'app/model/task'
+import { tasks } from 'app/data/tasks'
 
 const weightLevels = [1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
 

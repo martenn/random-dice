@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './App.css';
-import { Button } from './components/Button';
-import { TaskBoard } from './components/TaskBoard';
-import { Task } from './model/task';
-import { toss } from './services/tasks'
+import 'app/App.css';
+import { Button } from 'app/components/Button';
+import { TaskBoard } from 'app/components/TaskBoard';
+import { Task } from 'app/model/task';
+import { toss } from 'app/services/tasks'
 import { ToastContainer, toast } from 'react-toastify';
 import { injectStyle } from "react-toastify/dist/inject-style";
 
