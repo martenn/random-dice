@@ -5,11 +5,11 @@ interface TaskBoardProps {
   task?: Task;
 }
 
-export const TaskBoard: FC<TaskBoardProps> = ({
+export const TaskInfoBoard: FC<TaskBoardProps> = ({
   task
 }) => {
   return (
-    <div className="row">
+    <>
       {task ? (
         <div className="column">
           <div className="row">
@@ -21,6 +21,6 @@ export const TaskBoard: FC<TaskBoardProps> = ({
         <div className="task">Brak zadania</div>
       )
       }
-    </div>
+    </>
   )
 }
