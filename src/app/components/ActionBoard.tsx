@@ -16,12 +16,14 @@ export const ActionBoard: FC = () => {
   let [skipCount, setSkipCount] = useState(0);
   let [level, setLevel] = useState(1);
   let [task, setTask] = useState(undefined as unknown as Task);
+  let [startTime, setStartTime] = useState(new Date().getTime());
 
   const reset = () => {
     setTask(undefined as unknown as Task);
     setCounter(0);
     setLevel(1);
     setSkipCount(0);
+    setStartTime(new Date().getTime());
   }
 
   const tossATask = () => {
@@ -40,6 +42,7 @@ export const ActionBoard: FC = () => {
       toast("Koniec pomijania!");
     }
   }
+
   return (
     <>
       <Row><TaskInfoBoard task={task}></TaskInfoBoard></Row>
@@ -47,7 +50,7 @@ export const ActionBoard: FC = () => {
         <TossButton toss={() => tossATask()} />
         <SkipButton skip={() => skipTask()} disabled={skipCount >= skipLimit} />
       </Row>
-      <Row><InfoBoard counter={counter} level={level} /></Row>
+      <Row><InfoBoard counter={counter} level={level} startTime={startTime} /></Row>
       <Row><ResetButton reset={() => reset()} /></Row>
     </>
   );
