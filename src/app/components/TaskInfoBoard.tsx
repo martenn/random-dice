@@ -5,9 +5,7 @@ interface TaskBoardProps {
   task?: Task;
 }
 
-export const TaskInfoBoard: FC<TaskBoardProps> = ({
-  task
-}) => {
+export const TaskInfoBoard: FC<TaskBoardProps> = ({ task }) => {
   return (
     <>
       {task ? (
@@ -19,8 +17,7 @@ export const TaskInfoBoard: FC<TaskBoardProps> = ({
         </div>
       ) : (
         <div className="task">Brak zadania</div>
-      )
-      }
+      )}
     </>
-  )
-}
+  );
+};

@@ -1,9 +1,10 @@
+import React from 'react';
 import 'app/App.css';
 import { ToastContainer } from 'react-toastify';
-import { injectStyle } from "react-toastify/dist/inject-style";
+import { injectStyle } from 'react-toastify/dist/inject-style';
 import { ActionBoard } from 'app/components/ActionBoard';
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   injectStyle();
 }
 

@@ -9,9 +9,15 @@ export const Button: FC<ButtonProps> = ({
   clickHandler,
   text,
   className,
-  disabled
+  disabled,
 }) => {
   return (
-    <button disabled={disabled} className={className} onClick={() => clickHandler()}>{text}</button>
-  )
-}
+    <button
+      disabled={disabled}
+      className={className}
+      onClick={() => clickHandler()}
+    >
+      {text}
+    </button>
+  );
+};

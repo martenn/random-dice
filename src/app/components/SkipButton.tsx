@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Button } from './Button';
 
 interface SkipButtonProps {
@@ -6,15 +6,13 @@ interface SkipButtonProps {
   disabled: boolean;
 }
 
-export const SkipButton: FC<SkipButtonProps> = ({
-  skip,
-  disabled
-}) => {
+export const SkipButton: FC<SkipButtonProps> = ({ skip, disabled }) => {
   return (
     <Button
       text="Pomiń"
       className="action-button"
       disabled={disabled}
-      clickHandler={() => skip()} />
-  )
-}
+      clickHandler={() => skip()}
+    />
+  );
+};

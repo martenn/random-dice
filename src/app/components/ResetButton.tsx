@@ -1,18 +1,16 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Button } from 'app/components/Button';
 
 interface ResetButtonProps {
   reset(): void;
 }
 
-export const ResetButton: FC<ResetButtonProps> = ({
-  reset
-}) => {
+export const ResetButton: FC<ResetButtonProps> = ({ reset }) => {
   return (
     <Button
       className="action-button"
       text="Reset"
-      clickHandler={() => reset()}>
-    </Button>
+      clickHandler={() => reset()}
+    ></Button>
   );
-}
+};

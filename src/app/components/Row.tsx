@@ -1,11 +1,5 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
-export const Row: FC = ({
-  children
-}) => {
-  return (
-    <div className="row">
-      {children}
-    </div>
-  );
-}
+export const Row: FC = ({ children }) => {
+  return <div className="row">{children}</div>;
+};

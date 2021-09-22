@@ -5,14 +5,12 @@ interface TossButtonProps {
   toss(): void;
 }
 
-export const TossButton: FC<TossButtonProps> = ({
-  toss
-}) => {
+export const TossButton: FC<TossButtonProps> = ({ toss }) => {
   return (
     <Button
       className="action-button"
       text="Losuj"
-      clickHandler={() => toss()}>
-    </Button>
+      clickHandler={() => toss()}
+    ></Button>
   );
-}
+};
