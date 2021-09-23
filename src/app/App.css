@@ -21,8 +21,9 @@ body {
 
 .info {
   text-align: left;
-  padding: 20px;
+  padding: 5px 20px 5px 20px;
   flex: 1;
+  font-size: calc(16px - 0vmin);
 }
 
 .info-box {
