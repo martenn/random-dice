@@ -45,7 +45,6 @@ export const ActionBoard: FC = () => {
       },
     };
 
-    console.log(newStats);
     if (stats.counter > 0 && stats.counter % 30 === 0) {
       newStats = { ...newStats, level: stats.level + 1, skipCount: 0 };
     }
