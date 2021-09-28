@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from 'app/components/Button';
+import { Button } from 'app/components/buttons/Button';
 
 interface TossButtonProps {
   toss(): void;

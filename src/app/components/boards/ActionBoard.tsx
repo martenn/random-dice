@@ -1,14 +1,11 @@
 import React, { FC, useState } from 'react';
 import { Task } from 'app/model/task';
-import { InfoBoard } from 'app/components/InfoBoard';
-import { TaskInfoBoard } from 'app/components/TaskInfoBoard';
 import { toss } from 'app/services/tasks';
 import { toast } from 'react-toastify';
-import { ResetButton } from 'app/components/ResetButton';
-import { Row } from 'app/components/Row';
-import { TossButton } from 'app/components/TossButton';
-import { SkipButton } from 'app/components/SkipButton';
+import { Row } from 'app/components/layout/Row';
 import { Stats } from 'app/model/stats';
+import { InfoBoard, TaskInfoBoard } from 'app/components/boards';
+import { ResetButton, SkipButton, TossButton } from 'app/components/buttons';
 
 const skipLimit = 3;
 

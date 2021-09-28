@@ -2,8 +2,8 @@ import React from 'react';
 import 'app/App.css';
 import { ToastContainer } from 'react-toastify';
 import { injectStyle } from 'react-toastify/dist/inject-style';
-import { ActionBoard } from 'app/components/ActionBoard';
 import NoSleep from 'nosleep.js';
+import { AppRouter } from 'app/components/AppRouter';
 
 const noSleep = new NoSleep();
 document.addEventListener(
@@ -22,7 +22,7 @@ if (typeof window !== 'undefined') {
 function App() {
   return (
     <div>
-      <ActionBoard />
+      <AppRouter />
       <ToastContainer hideProgressBar={false} />
     </div>
   );

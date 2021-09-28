@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from './Button';
+import { Button } from 'app/components/buttons/Button';
 
 interface SkipButtonProps {
   skip(): void;
