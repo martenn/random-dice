@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Row } from 'app/components/layout/Row';
 import { StartButton } from 'app/components/buttons';
+import { RadioGroup } from 'app/components/RadioGroup';
 
 export const ConfigBoard: FC = () => {
   const history = useHistory();
@@ -14,6 +15,7 @@ export const ConfigBoard: FC = () => {
   return (
     <>
       <Row>
+        <RadioGroup />
         <StartButton start={() => routeChange()}></StartButton>
       </Row>
     </>
