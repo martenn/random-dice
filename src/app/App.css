@@ -64,3 +64,7 @@ body {
 .level3 {
   background-color: red;
 }
+
+.config-option {
+  font-size: calc(16px - 0vmin);
+}

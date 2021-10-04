@@ -6,8 +6,13 @@ import { Row } from 'app/components/layout/Row';
 import { Stats } from 'app/model/stats';
 import { InfoBoard, TaskInfoBoard } from 'app/components/boards';
 import { ResetButton, SkipButton, TossButton } from 'app/components/buttons';
+import { useLocation } from 'react-router';
 
-const skipLimit = 3;
+export interface ActionConfig {
+  skipLimit: number;
+  tags: string[];
+  levelLimit: { [key: number]: number };
+}
 
 const emptyStats = (): Stats => ({
   levelTaskCounts: {
@@ -24,6 +29,12 @@ const emptyStats = (): Stats => ({
 export const ActionBoard: FC = () => {
   const [task, setTask] = useState(undefined as unknown as Task);
   const [stats, setStats] = useState(emptyStats);
+  const { state } = useLocation<ActionConfig>();
+  const skipLimit = state.skipLimit || 4;
+  const levelLimit = state.levelLimit || {
+    1: 30,
+    2: 30,
+  };
 
   const reset = () => {
     setTask(undefined as unknown as Task);
@@ -42,7 +53,10 @@ export const ActionBoard: FC = () => {
       },
     };
 
-    if (stats.counter > 0 && stats.counter % 30 === 0) {
+    if (
+      stats.counter > 0 &&
+      stats.counter % (levelLimit ? levelLimit[stats.level] : 1) === 0
+    ) {
       newStats = { ...newStats, level: stats.level + 1, skipCount: 0 };
     }
 

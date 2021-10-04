@@ -1,12 +1,5 @@
 import { Task } from 'app/model/task';
 
-/*
-levels:
-1. intro, warm up
-2. warm & hot
-3. sex
-*/
-
 export const tasks: Task[] = [
   {
     action: 'całuje',
@@ -1049,3 +1042,9 @@ export const tasks: Task[] = [
     level: 2,
   },
 ];
+
+export const tags = (): string[] => {
+  const tagSet = new Set<string>();
+  tasks.forEach((t) => t.tags.forEach((tag) => tagSet.add(tag)));
+  return Array.from(tagSet);
+};

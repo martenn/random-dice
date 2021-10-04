@@ -6,9 +6,7 @@ export const AppRouter: FC = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/play">
-          <ActionBoard />
-        </Route>
+        <Route path="/play" component={ActionBoard} />
         <Route path="/">
           <ConfigBoard />
         </Route>
