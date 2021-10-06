@@ -30,8 +30,8 @@ export const ActionBoard: FC = () => {
   const [task, setTask] = useState(undefined as unknown as Task);
   const [stats, setStats] = useState(emptyStats);
   const { state } = useLocation<ActionConfig>();
-  const skipLimit = state.skipLimit || 4;
-  const levelLimit = state.levelLimit || {
+  const skipLimit = state && state.skipLimit >= 0 ? state.skipLimit : 4;
+  const levelLimit = (state && state.levelLimit) || {
     1: 30,
     2: 30,
   };

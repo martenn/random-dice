@@ -7,20 +7,37 @@ import { Column } from '../layout/Column';
 export const ConfigBoard: FC = () => {
   const history = useHistory();
   const [selectedLevel, setSelectedLevel] = useState('hard');
+  const [skipLevel, setSkipLevel] = useState(4);
+  const [l1Level, setL1Level] = useState(20);
+  const [l2Level, setL2Level] = useState(30);
 
   const tags = ['anal', 'oral', 'sex'];
 
-  const play = () => {
-    const path = `/play`;
-    history.push(path, {
-      skipLimit: 4,
-      tags: tags,
-      levelLimit: {
-        1: 30,
-        2: 30,
-      },
-    });
+  const levelLimitsDefault: { [key: string]: { [key: number]: number } } = {
+    soft: {
+      1: 40,
+      2: 50,
+    },
+    medium: {
+      1: 20,
+      2: 30,
+    },
+    hard: {
+      1: 10,
+      2: 20,
+    },
   };
+
+  const getLevels = () => {
+    if (levelLimitsDefault[selectedLevel]) {
+      return levelLimitsDefault[selectedLevel];
+    }
+    return {
+      1: l1Level,
+      2: l2Level,
+    };
+  };
+
   const levels = [
     {
       label: 'Soft',
@@ -40,6 +57,15 @@ export const ConfigBoard: FC = () => {
     },
   ];
 
+  const play = () => {
+    const path = `/play`;
+    history.push(path, {
+      skipLimit: skipLevel,
+      tags: tags,
+      levelLimit: getLevels(),
+    });
+  };
+
   return (
     <>
       <Column>
@@ -53,15 +79,30 @@ export const ConfigBoard: FC = () => {
           <div className="column">
             <span>
               <label htmlFor="skipCount">Pominięć: </label>
-              <input id="skipCount" type="number" value="4" />
+              <input
+                id="skipCount"
+                type="number"
+                value={skipLevel}
+                onChange={(e) => setSkipLevel(+e.target.value)}
+              />
             </span>
             <span>
-              <label htmlFor="l1Border">Ruchów L1: </label>
-              <input id="l1Border" type="number" value="30" />
+              <label htmlFor="l1Limit">Ruchów L1: </label>
+              <input
+                id="l1Limit"
+                type="number"
+                value={l1Level}
+                onChange={(e) => setL1Level(+e.target.value)}
+              />
             </span>
             <span>
-              <label htmlFor="l2Border">Ruchów L2: </label>
-              <input id="l2Border" type="number" value="30" />
+              <label htmlFor="l2Limit">Ruchów L2: </label>
+              <input
+                id="l2Limit"
+                type="number"
+                value={l2Level}
+                onChange={(e) => setL2Level(+e.target.value)}
+              />
             </span>
           </div>
         )}
