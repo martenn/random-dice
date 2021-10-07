@@ -58,13 +58,13 @@ export const tasks: Task[] = [
   {
     action: 'całuje',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
     action: 'całuje',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['oral', 'anal'],
     level: 2,
   },
   {
@@ -88,7 +88,7 @@ export const tasks: Task[] = [
   {
     action: 'całuje',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
@@ -161,7 +161,7 @@ export const tasks: Task[] = [
   {
     action: 'masuje',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['anal'],
     level: 2,
   },
   {
@@ -258,13 +258,13 @@ export const tasks: Task[] = [
   {
     action: 'liże',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
     action: 'liże',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['oral', 'anal'],
     level: 2,
   },
   {
@@ -288,7 +288,7 @@ export const tasks: Task[] = [
   {
     action: 'liże',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
@@ -301,103 +301,103 @@ export const tasks: Task[] = [
   {
     action: 'gryzie',
     part: 'pośladki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'ręce',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'stopy',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'ramiona',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'palce',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'pośladki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'nos',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'usta',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'policzki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'język',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['bite'],
     level: 2,
   },
   {
     action: 'gryzie',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['bite', 'anal'],
     level: 2,
   },
   {
     action: 'gryzie',
     part: 'piersi',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'sutki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'brodawki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
   {
     action: 'gryzie',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['bite'],
     level: 2,
   },
   {
     action: 'gryzie',
     part: 'paszki',
-    tags: [],
+    tags: ['bite'],
     level: 1,
   },
 
@@ -464,7 +464,7 @@ export const tasks: Task[] = [
   {
     action: 'szczypie',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['anal'],
     level: 2,
   },
   {
@@ -555,13 +555,13 @@ export const tasks: Task[] = [
   {
     action: 'ssie',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
     action: 'ssie',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['oral', 'anal'],
     level: 2,
   },
   {
@@ -585,7 +585,7 @@ export const tasks: Task[] = [
   {
     action: 'ssie',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
@@ -652,13 +652,13 @@ export const tasks: Task[] = [
   {
     action: 'ssie mocno',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
     action: 'ssie mocno',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['oral', 'anal'],
     level: 2,
   },
   {
@@ -682,7 +682,7 @@ export const tasks: Task[] = [
   {
     action: 'ssie mocno',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
@@ -695,91 +695,91 @@ export const tasks: Task[] = [
   {
     action: 'klepie',
     part: 'pośladki',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'ręce',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'stopy',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'ramiona',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'palce',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'nos',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'policzki',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'język',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'dziurkę/penisa',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['slap', 'anal'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'piersi',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'sutki',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'brodawki',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'łechtaczkę/jajka',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
   {
     action: 'klepie',
     part: 'paszki',
-    tags: [],
+    tags: ['slap'],
     level: 1,
   },
 
@@ -846,7 +846,7 @@ export const tasks: Task[] = [
   {
     action: 'penetruje',
     part: 'dupkę/dziurkę',
-    tags: [],
+    tags: ['anal'],
     level: 1,
   },
   {
@@ -902,22 +902,22 @@ export const tasks: Task[] = [
   },
   {
     action: 'masturbuje się delikatnie',
-    tags: [],
+    tags: ['masturbate'],
     level: 2,
   },
   {
     action: 'masturbuje partnera delikatnie',
-    tags: [],
+    tags: ['masturbate'],
     level: 2,
   },
   {
     action: 'masturbuje się mocno',
-    tags: [],
+    tags: ['masturbate'],
     level: 3,
   },
   {
     action: 'masturbuje partnera mocno',
-    tags: [],
+    tags: ['masturbate'],
     level: 3,
   },
   {
@@ -932,12 +932,12 @@ export const tasks: Task[] = [
   },
   {
     action: 'wybiera zabawkę i używa jej na partnerze',
-    tags: [],
+    tags: ['toys'],
     level: 2,
   },
   {
     action: 'wybiera zabawkę i się nią masturbuje',
-    tags: [],
+    tags: ['masturbate', 'toys'],
     level: 2,
   },
   {
@@ -983,52 +983,52 @@ export const tasks: Task[] = [
   },
   {
     action: '69',
-    tags: [],
+    tags: ['oral'],
     level: 3,
   },
   {
     action: 'na pieska anal',
-    tags: [],
+    tags: ['anal'],
     level: 3,
   },
   {
     action: 'bokiem anal',
-    tags: [],
+    tags: ['anal'],
     level: 3,
   },
   {
     action: 'na jeźdźca anal',
-    tags: [],
+    tags: ['anal'],
     level: 3,
   },
   {
     action: 'tyłem na stojąco anal',
-    tags: [],
+    tags: ['anal'],
     level: 3,
   },
   {
     action: 'ona na brzuchu anal',
-    tags: [],
+    tags: ['anal'],
     level: 3,
   },
   {
-    action: 'delikatny oral',
-    tags: [],
+    action: 'intensywny anal',
+    tags: ['anal'],
     level: 3,
   },
   {
     action: 'intensywny oral',
-    tags: [],
+    tags: ['oral'],
     level: 3,
   },
   {
     action: 'delikatny anal',
-    tags: [],
+    tags: ['anal'],
     level: 2,
   },
   {
     action: 'delikatny oral',
-    tags: [],
+    tags: ['oral'],
     level: 2,
   },
   {
@@ -1038,7 +1038,7 @@ export const tasks: Task[] = [
   },
   {
     action: 'wiąże partnera i daje klapsy',
-    tags: [],
+    tags: ['slap'],
     level: 2,
   },
 ];

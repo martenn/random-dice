@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { Task } from 'app/model/task';
 import { toss } from 'app/services/tasks';
 import { toast } from 'react-toastify';
-import { Row } from 'app/components/layout/Row';
+import { Row } from 'app/components/layout';
 import { Stats } from 'app/model/stats';
 import { InfoBoard, TaskInfoBoard } from 'app/components/boards';
 import { ResetButton, SkipButton, TossButton } from 'app/components/buttons';
