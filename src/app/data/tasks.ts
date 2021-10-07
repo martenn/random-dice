@@ -1043,7 +1043,7 @@ export const tasks: Task[] = [
   },
 ];
 
-export const tags = (): string[] => {
+export const uniqueTags = (): string[] => {
   const tagSet = new Set<string>();
   tasks.forEach((t) => t.tags.forEach((tag) => tagSet.add(tag)));
   return Array.from(tagSet);

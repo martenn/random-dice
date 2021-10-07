@@ -4,12 +4,11 @@ import { StartButton } from 'app/components/buttons';
 import { RadioGroup } from 'app/components/radio/RadioGroup';
 import { Column } from 'app/components/layout';
 import { LabeledInput } from 'app/components/input/LabeledInput';
-import { tags } from 'app/data/tasks';
+import { uniqueTags } from 'app/data/tasks';
 import { CheckboxGroup } from 'app/components/checkbox';
 
 const defaultSelectedTags: Map<string, boolean> = new Map();
-
-tags().forEach((task) => defaultSelectedTags.set(task, true));
+uniqueTags().forEach((task) => defaultSelectedTags.set(task, true));
 
 const levels = [
   {
@@ -67,7 +66,7 @@ export const ConfigBoard: FC = () => {
     const path = `/play`;
     history.push(path, {
       skipLimit: skipLevel,
-      tags: tags,
+      tags: selectedTags,
       levelLimit: getLevels(),
     });
   };
