@@ -7,7 +7,6 @@ interface CheckboxGroupProps {
 }
 
 export const CheckboxGroup: FC<CheckboxGroupProps> = ({ boxes, setValue }) => {
-  console.log(boxes);
   const catchValue = (name: string, selected: boolean) => {
     const newSelected = new Map(boxes);
     newSelected.set(name, selected);

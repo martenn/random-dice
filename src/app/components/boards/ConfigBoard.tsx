@@ -32,17 +32,22 @@ const levels = [
 const levelLimitsDefault: { [key: string]: { [key: number]: number } } = {
   soft: {
     1: 40,
-    2: 50,
+    2: 90,
   },
   medium: {
     1: 20,
-    2: 30,
+    2: 50,
   },
   hard: {
     1: 10,
-    2: 20,
+    2: 30,
   },
 };
+
+const getSelectedTags = (tags: Map<string, boolean>) =>
+  Array.from(tags.entries())
+    .filter((e) => e[1])
+    .map((e) => e[0]);
 
 export const ConfigBoard: FC = () => {
   const history = useHistory();
@@ -66,7 +71,7 @@ export const ConfigBoard: FC = () => {
     const path = `/play`;
     history.push(path, {
       skipLimit: skipLevel,
-      tags: selectedTags,
+      tags: getSelectedTags(selectedTags),
       levelLimit: getLevels(),
     });
   };

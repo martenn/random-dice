@@ -42,7 +42,7 @@ export const ActionBoard: FC = () => {
   };
 
   const tossATask = () => {
-    const newTask = toss(stats.level);
+    const newTask = toss(stats.level, state.tags);
     setTask(newTask);
     let newStats = {
       ...stats,
@@ -64,7 +64,7 @@ export const ActionBoard: FC = () => {
   };
 
   const skipTask = () => {
-    const newTask = toss(stats.level);
+    const newTask = toss(stats.level, state.tags);
     setTask(newTask);
     const newStats = {
       ...stats,
