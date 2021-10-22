@@ -17,7 +17,7 @@ export const Checkbox: FC<CheckboxProps> = ({
   };
 
   return (
-    <>
+    <span className="checkbox">
       <label htmlFor={name}>{label}</label>
       <input
         id={name}
@@ -25,6 +25,6 @@ export const Checkbox: FC<CheckboxProps> = ({
         onChange={catchCheckboxValue}
         checked={checked}
       />
-    </>
+    </span>
   );
 };

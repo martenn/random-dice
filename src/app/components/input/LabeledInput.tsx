@@ -18,9 +18,17 @@ export const LabeledInput: FC<LabeledInputProps<number>> = ({
   };
 
   return (
-    <span>
-      <label htmlFor={id}>{label}</label>
-      <input id={id} type="number" value={value} onChange={catchValue} />
-    </span>
+    <div className="labeled-input row">
+      <label className="row-item" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        className="row-item"
+        id={id}
+        type="number"
+        value={value}
+        onChange={catchValue}
+      />
+    </div>
   );
 };

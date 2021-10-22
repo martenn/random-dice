@@ -14,7 +14,7 @@ export const CheckboxGroup: FC<CheckboxGroupProps> = ({ boxes, setValue }) => {
   };
 
   return (
-    <div>
+    <div className="row wrap">
       {Array.from(boxes.keys()).map((t) => (
         <Checkbox
           key={t}
