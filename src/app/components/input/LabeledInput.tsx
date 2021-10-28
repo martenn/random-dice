@@ -5,6 +5,7 @@ interface LabeledInputProps<T> {
   label: string;
   value: T;
   setValue(value: T): void;
+  disabled: boolean;
 }
 
 export const LabeledInput: FC<LabeledInputProps<number>> = ({
@@ -12,6 +13,7 @@ export const LabeledInput: FC<LabeledInputProps<number>> = ({
   label,
   value,
   setValue,
+  disabled,
 }) => {
   const catchValue = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(+e.target.value);
@@ -28,6 +30,7 @@ export const LabeledInput: FC<LabeledInputProps<number>> = ({
         type="number"
         value={value}
         onChange={catchValue}
+        disabled={disabled}
       />
     </div>
   );

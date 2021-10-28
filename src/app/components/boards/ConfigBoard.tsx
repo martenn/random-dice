@@ -57,6 +57,14 @@ export const ConfigBoard: FC = () => {
   const [l2Level, setL2Level] = useState(30);
   const [selectedTags, setSelectedTags] = useState(defaultSelectedTags);
 
+  const catchSelectedLevel = (level: string) => {
+    setSelectedLevel(level);
+    if (levelLimitsDefault[level]) {
+      setL1Level(levelLimitsDefault[level][1]);
+      setL2Level(levelLimitsDefault[level][2]);
+    }
+  };
+
   const getLevels = () => {
     if (levelLimitsDefault[selectedLevel]) {
       return levelLimitsDefault[selectedLevel];
@@ -82,31 +90,32 @@ export const ConfigBoard: FC = () => {
         <RadioGroup
           radios={levels}
           selectedValue={selectedLevel}
-          selectRadio={setSelectedLevel}
+          selectRadio={catchSelectedLevel}
         />
 
-        {selectedLevel === 'custom' && (
-          <Column>
-            <LabeledInput
-              id="skip"
-              label="Pominięć:"
-              value={skipLevel}
-              setValue={setSkipLevel}
-            />
-            <LabeledInput
-              id="l1Limit"
-              label="Ruchów L1:"
-              value={l1Level}
-              setValue={setL1Level}
-            />
-            <LabeledInput
-              id="l2Limit"
-              label="Ruchów L2:"
-              value={l2Level}
-              setValue={setL2Level}
-            />
-          </Column>
-        )}
+        <Column>
+          <LabeledInput
+            id="skip"
+            label="Pominięć:"
+            value={skipLevel}
+            setValue={setSkipLevel}
+            disabled={selectedLevel !== 'custom'}
+          />
+          <LabeledInput
+            id="l1Limit"
+            label="Ruchów L1:"
+            value={l1Level}
+            setValue={setL1Level}
+            disabled={selectedLevel !== 'custom'}
+          />
+          <LabeledInput
+            id="l2Limit"
+            label="Ruchów L1+L2:"
+            value={l2Level}
+            setValue={setL2Level}
+            disabled={selectedLevel !== 'custom'}
+          />
+        </Column>
 
         <CheckboxGroup boxes={selectedTags} setValue={setSelectedTags} />
         <StartButton start={() => play()}></StartButton>

@@ -19,9 +19,9 @@ export const RadioGroup: FC<RadioGroupProps> = ({
   };
 
   return (
-    <div className="column config-option">
+    <div className="row wrap">
       {radios.map((r) => (
-        <span key={r.value}>
+        <span key={r.value} className="clickable-item">
           <label htmlFor={r.value}>{r.label}</label>
           <input
             id={r.value}

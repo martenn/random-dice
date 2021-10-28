@@ -17,7 +17,7 @@ export const Checkbox: FC<CheckboxProps> = ({
   };
 
   return (
-    <span className="checkbox">
+    <span className="clickable-item">
       <label htmlFor={name}>{label}</label>
       <input
         id={name}
